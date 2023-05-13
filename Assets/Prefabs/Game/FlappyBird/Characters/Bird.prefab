@@ -30,6 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1863751014977309735}
+  - {fileID: 3581554792185792582}
   m_Father: {fileID: 3432664848281920910}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48,6 +49,70 @@ MonoBehaviour:
   _name: Bird
   _resources:
   - {fileID: 9017301334503252511}
+  - {fileID: 8185933519230938235}
+--- !u!1 &1021898739026837493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3581554792185792582}
+  - component: {fileID: 8185933519230938235}
+  - component: {fileID: 2338937838973823202}
+  m_Layer: 0
+  m_Name: Money
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3581554792185792582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021898739026837493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5359109647585046420}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8185933519230938235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021898739026837493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c602654bd97fc42a3e75a56d0b49c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Money
+  _changePolicy: {fileID: 2338937838973823202}
+  _startValue: 0
+  _isVisibleInInventory: 0
+--- !u!114 &2338937838973823202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021898739026837493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f29a5912e12150243ae7f438b7502bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minValue: 0
+  _maxValue: 999999
 --- !u!1 &4100959798795440371
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +273,7 @@ GameObject:
   - component: {fileID: 7993725775654117205}
   - component: {fileID: 113919608454060014}
   - component: {fileID: 8192469059042465522}
+  - component: {fileID: 2676030602708652702}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -296,3 +362,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidBody2D: {fileID: 7993725775654117205}
   _jumpForce: 7
+--- !u!114 &2676030602708652702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8272698039358619504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2c05ea5d02d3842894408ed1a3f028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthResource: {fileID: 9017301334503252511}
+  _character: {fileID: 113919608454060014}

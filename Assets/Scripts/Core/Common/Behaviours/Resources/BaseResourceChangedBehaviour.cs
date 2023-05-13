@@ -5,14 +5,23 @@ public class BaseResourceChangedBehaviour : MonoBehaviour
     [SerializeField] private string _resourceID;
     [SerializeField] private int _value = 1;
     [SerializeField] private ResourceUsePolicy _usePolicy;
+    [SerializeField] private bool _isDestroyOnUse = true;
+
+    // TODO: Продумать таймер, когда можно воспользоваться изменением ресурсов ещё раз.
+    private bool _isUsed = false;
 
     private void Update()
     {
-        if (_usePolicy && _usePolicy.CanUse())
+        if (!_isUsed && _usePolicy && _usePolicy.CanUse())
         {
             OperationWithResource(_usePolicy.Resource, _value);
 
-            Destroy(gameObject);
+            if (_isDestroyOnUse)
+            {
+                Destroy(gameObject);
+            }
+
+            _isUsed = true;
         }
     }
 

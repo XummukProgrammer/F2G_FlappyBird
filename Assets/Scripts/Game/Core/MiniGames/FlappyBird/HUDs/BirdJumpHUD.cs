@@ -35,7 +35,10 @@ public class BirdJumpHUD : HUD
                     var miniGame = currentMiniGame as FlappyBirdMiniGame;
                     var bird = miniGame.Bird;
 
-                    bird.OnBirdJumped();
+                    if (bird)
+                    {
+                        bird.OnBirdJumped();
+                    }
                 }
             }
         }
