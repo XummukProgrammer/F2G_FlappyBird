@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 4875516450327540409}
   - component: {fileID: 8956388885683249079}
   - component: {fileID: 9002951254900327828}
+  - component: {fileID: 7252680382462357359}
   m_Layer: 0
   m_Name: FlappyBird
   m_TagString: Untagged
@@ -260,6 +261,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnTime: 1
+--- !u!114 &7252680382462357359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937460705066183088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8daef400654924d9c69fbde65b69a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bird: {fileID: 3199738189657275025}
 --- !u!1 &2427085825842740514
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +450,7 @@ GameObject:
   - component: {fileID: 3789047136284824025}
   - component: {fileID: 1798527491914772068}
   - component: {fileID: 6056999607323831557}
+  - component: {fileID: 8176401645899840407}
   m_Layer: 0
   m_Name: HUDs
   m_TagString: Untagged
@@ -491,6 +506,23 @@ MonoBehaviour:
   _name: BirdJump
   _prefab: {fileID: 4424429283323929484, guid: be058237c8fd33f4f868879bb67055dc, type: 3}
   _location: 4
+--- !u!114 &8176401645899840407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2781522014560111187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2bd4a0e5e673e4d9399386e0c63db7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Money
+  _prefab: {fileID: 736340070334246385, guid: 37e40c67503a21f4ab65e89362fe9ca0, type: 3}
+  _location: 0
+  _resourcesID: Bird
+  _resourceID: Money
 --- !u!1 &3103780778292630931
 GameObject:
   m_ObjectHideFlags: 0

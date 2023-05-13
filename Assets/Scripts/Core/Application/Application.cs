@@ -15,6 +15,8 @@ public class Application : MonoBehaviour
     private ActionsQueue _actionsQueue = new();
     private Location _location = new();
     private ApplicationDebugWindowDelegate _debugWindowDelegate = new();
+    private ISDK _sdk;
+    private IArchive _archive;
 
     public static Application Instance;
     public string ApplicationName => _applicationName;
@@ -29,6 +31,8 @@ public class Application : MonoBehaviour
     public WindowContainer WindowContainer => _windowContainer;
     public DebugWindowBasicCheatsPanel DebugBasicCheatsPanelPrefab => _debugBasicCheatsPanelPrefab;
     public HUDShowingFlagsController HUDShowingFlagsController => _hudShowingFlagsController;
+    public ISDK SDK => _sdk;
+    public IArchive Archive => _archive;
 
     private void Awake()
     {
@@ -38,6 +42,9 @@ public class Application : MonoBehaviour
         Debug.Log("[Core] started");
         Debug.Log("ApplicationName = " + _applicationName);
         Debug.Log("ApplicationVersion = " + _applicationVersion);
+
+        _sdk = SDKBuilder.CreateSDK();
+        _archive = _sdk.GetArchive();
 
         var managersSetup = new ManagersSetup();
         managersSetup.Setup(_managers);
