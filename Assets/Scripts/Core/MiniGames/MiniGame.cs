@@ -42,7 +42,7 @@ public class MiniGame : ManagerableElement
             _stateGraph.OnDeinit();
         }
 
-        // TODO: Удалить _debugWindowDelegate
+        DebugWindow.RemoveDelegate(DebugWindowTabDelegateID.MiniGames, _debugWindowDelegate);
     }
 
     public override void OnUpdate() 

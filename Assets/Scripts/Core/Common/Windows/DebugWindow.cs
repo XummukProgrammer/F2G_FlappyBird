@@ -45,6 +45,11 @@ public class DebugWindow : Window
         _tabDelegates[delegateID].Add(tabDelegate);
     }
 
+    static public void RemoveDelegate(DebugWindowTabDelegateID delegateID, DebugWindowTabDelegate tabDelegate)
+    {
+        _tabDelegates[delegateID].Remove(tabDelegate);
+    }
+
     static public string GetModifTextWithBasicDelegate(DebugWindowTabDelegateID delegateID)
     {
         string text = "";

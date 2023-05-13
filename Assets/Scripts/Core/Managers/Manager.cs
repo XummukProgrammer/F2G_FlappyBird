@@ -75,5 +75,11 @@ public class Manager<T> : BaseManager where T : ManagerableElement
         return null;
     }
 
+    public void RemoveElement(T element)
+    {
+        element.OnDeinit();
+        _elements.Remove(element);
+    }
+
     public virtual bool IsInitElement() { return true; }
 }

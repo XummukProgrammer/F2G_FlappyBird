@@ -10,19 +10,27 @@ public class HUD : ManagerableElement
     private void Start()
     {
         Application.Instance.Managers.GetManager<HUDs>().AddElement(this);
-        Application.Instance.HUDShowingFlagsController.FlagsChanged += OnHUDShowingFlagsChanged;
     }
 
     private void OnDestroy()
     {
-        // TODO: Удалять элемент из HUDs
+        Application.Instance.Managers.GetManager<HUDs>().RemoveElement(this);
     }
 
     public override void OnInit()
     {
         base.OnInit();
 
+        Application.Instance.HUDShowingFlagsController.FlagsChanged += OnHUDShowingFlagsChanged;
+
         ChangeActive();
+    }
+
+    public override void OnDeinit()
+    {
+        base.OnDeinit();
+
+        Application.Instance.HUDShowingFlagsController.FlagsChanged -= OnHUDShowingFlagsChanged;
     }
 
     public void Show()

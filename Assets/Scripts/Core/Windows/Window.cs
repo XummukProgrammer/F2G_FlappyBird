@@ -18,7 +18,7 @@ public class Window : ManagerableElement
 
     private void OnDestroy()
     {
-        // TODO: Удалять элемент из Windows
+        Application.Instance.Managers.GetManager<Windows>().RemoveElement(this);
     }
 
     public void Show()

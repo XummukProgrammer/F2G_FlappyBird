@@ -17,7 +17,11 @@ public class Resources : ManagerableElement
 
     private void OnDestroy()
     {
-        // TODO: Добавить удаление ресурсов
+        var resourcesManager = Application.Instance.Managers.GetManager<ResourcesManager>();
+        if (resourcesManager != null)
+        {
+            resourcesManager.RemoveElement(this);
+        }
     }
 
     public override void OnInit()
