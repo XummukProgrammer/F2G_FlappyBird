@@ -24,21 +24,20 @@ public class BirdJumpHUD : HUD
 
     private void OnTappedToArea()
     {
-        var miniGames = Application.Instance.Managers.GetManager<MiniGames>();
-        if (miniGames != null)
+        var miniGame = FlappyBirdMiniGameUtils.GetMiniGame();
+        if (miniGame)
         {
-            var currentMiniGame = miniGames.CurrentMiniGame;
-            if (currentMiniGame != null)
-            {
-                if (currentMiniGame is FlappyBirdMiniGame)
-                {
-                    var miniGame = currentMiniGame as FlappyBirdMiniGame;
-                    var bird = miniGame.Bird;
+            var bird = miniGame.Bird;
 
-                    if (bird)
-                    {
-                        bird.OnBirdJumped();
-                    }
+            if (bird)
+            {
+                if (bird.IsStopped)
+                {
+                    Application.Instance.GlobalContext.SetVariable("IsWaitJumpTapped", "yes");
+                }
+                else
+                {
+                    bird.OnBirdJumped();
                 }
             }
         }
