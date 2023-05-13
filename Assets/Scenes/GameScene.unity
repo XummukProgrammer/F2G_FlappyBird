@@ -751,7 +751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _miniGameName: FlappyBird
-  _miniGamePrefab: {fileID: 3202588039057638069, guid: 7524242b07614f947a33589d8f060553, type: 3}
+  _miniGamePrefab: {fileID: 6744617007755701174, guid: 7524242b07614f947a33589d8f060553, type: 3}
   _camera: {fileID: 519420031}
 --- !u!1 &866627965
 GameObject:
@@ -1822,6 +1822,7 @@ MonoBehaviour:
     - _ID: Default
       _hudNames:
       - OpenDebugWindow
+      - BirdJump
     _defaultID: Default
 --- !u!1 &2013545562
 GameObject:

@@ -76,7 +76,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8247772775562824173}
   m_Father: {fileID: 937460705066183055}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -89,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 937460705066183055}
-  - component: {fileID: 3202588039057638069}
+  - component: {fileID: 6744617007755701174}
   m_Layer: 0
   m_Name: FlappyBird
   m_TagString: Untagged
@@ -116,7 +117,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3202588039057638069
+--- !u!114 &6744617007755701174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,10 +126,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 937460705066183088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 127cdc0d90a83354083d42151a35f4da, type: 3}
+  m_Script: {fileID: 11500000, guid: 894b8c628f01e4a40818088271f715e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _name: FlappyBird
+  _bird: {fileID: 3199738189657275025}
 --- !u!1 &2781522014560111187
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,6 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3789047136284824025}
   - component: {fileID: 1798527491914772068}
+  - component: {fileID: 6056999607323831557}
   m_Layer: 0
   m_Name: HUDs
   m_TagString: Untagged
@@ -179,6 +182,21 @@ MonoBehaviour:
   _windowID: DebugWindow
   _sceneLocation: 2
   _priority: 0
+--- !u!114 &6056999607323831557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2781522014560111187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3bd27d72211d340b59e69ae6c23fa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: BirdJump
+  _prefab: {fileID: 4424429283323929484, guid: be058237c8fd33f4f868879bb67055dc, type: 3}
+  _location: 4
 --- !u!1 &2911380353574614085
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,3 +1010,76 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: Win
+--- !u!1001 &6761802833992821859
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 937460704177662524}
+    m_Modifications:
+    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272698039358619504, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+      propertyPath: m_Name
+      value: Bird
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+--- !u!114 &3199738189657275025 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8192469059042465522, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+  m_PrefabInstance: {fileID: 6761802833992821859}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17657a8363b87af47af01b89034ac26d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &8247772775562824173 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+  m_PrefabInstance: {fileID: 6761802833992821859}
+  m_PrefabAsset: {fileID: 0}
