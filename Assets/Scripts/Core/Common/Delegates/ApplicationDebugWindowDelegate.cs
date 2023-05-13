@@ -18,8 +18,8 @@ public class ApplicationDebugWindowDelegate
 
     private void ModifText(ref string text)
     {
-        text += $"Application name: {Application.Instance.Data.Name}\n";
-        text += $"Application version: {Application.Instance.Data.Version}\n";
+        text += $"Application name: {Application.Instance.ApplicationName}\n";
+        text += $"Application version: {Application.Instance.ApplicationVersion}\n";
 
         if (Application.Instance.StateGraph)
         {

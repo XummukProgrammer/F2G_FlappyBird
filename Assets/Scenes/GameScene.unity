@@ -579,8 +579,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1001254246}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &556911396
 GameObject:
@@ -730,13 +730,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763637982}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1001254246}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &763637984
 MonoBehaviour:
@@ -910,44 +910,11 @@ MonoBehaviour:
   - _location: 4
     _container: {fileID: 556911397}
   - _location: 5
-    _container: {fileID: 13217214}
+    _container: {fileID: 2035510827}
   - _location: 6
+    _container: {fileID: 13217214}
+  - _location: 7
     _container: {fileID: 1169816537}
-  - _location: 4
-    _container: {fileID: 556911397}
---- !u!1 &1001254245
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1001254246}
-  m_Layer: 0
-  m_Name: === Objects ===
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1001254246
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001254245}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 519420032}
-  - {fileID: 763637983}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1086642802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,38 +1764,6 @@ MonoBehaviour:
   _ID: IsToCore
   _value: yes
   _isGlobal: 0
---- !u!1 &1838337460
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1838337461}
-  m_Layer: 0
-  m_Name: === Settings ===
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1838337461
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838337460}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1938108878}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1938108877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,7 +1794,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 223440683}
-  m_Father: {fileID: 1838337461}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1938108879
@@ -1874,7 +1809,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df0a5b691fe499944bfc6c038842ed4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data: {fileID: 11400000, guid: cc14c475708b27942a280941ad7f8d24, type: 2}
+  _applicationName: Flappy Bird
+  _applicationVersion: 1.0.0 alpha
   _level: {fileID: 763637984}
   _hudContainer: {fileID: 919695888}
   _windowContainer: {fileID: 18549551}
@@ -1884,7 +1820,8 @@ MonoBehaviour:
     - _ID: Empty
       _hudNames: []
     - _ID: Default
-      _hudNames: []
+      _hudNames:
+      - OpenDebugWindow
     _defaultID: Default
 --- !u!1 &2013545562
 GameObject:
@@ -2005,7 +1942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057002364}
   m_Layer: 0
-  m_Name: === UI ===
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2026,5 +1963,5 @@ Transform:
   - {fileID: 1597124365}
   - {fileID: 1110643923}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

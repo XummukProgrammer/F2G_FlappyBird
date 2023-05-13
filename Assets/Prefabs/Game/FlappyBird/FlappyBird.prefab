@@ -139,9 +139,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3789047136284824025}
   - component: {fileID: 1798527491914772068}
-  - component: {fileID: 5893066532606584731}
-  - component: {fileID: 5874029220940079991}
-  - component: {fileID: 5884192577671903852}
   m_Layer: 0
   m_Name: HUDs
   m_TagString: Untagged
@@ -178,60 +175,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: OpenDebugWindow
   _prefab: {fileID: 7318095338659720780, guid: ca2bdf05484f6bb489c198b53e7fde53, type: 3}
-  _location: 2
+  _location: 6
   _windowID: DebugWindow
   _sceneLocation: 2
   _priority: 0
---- !u!114 &5893066532606584731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2781522014560111187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0459f0146c74c5419b1b74172105baf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _name: OpenInventoryWindow
-  _prefab: {fileID: 7318095338659720780, guid: ca2bdf05484f6bb489c198b53e7fde53, type: 3}
-  _location: 2
-  _windowID: InventoryWindow
-  _sceneLocation: 2
-  _priority: 0
---- !u!114 &5874029220940079991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2781522014560111187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eccca613268a2e478fb2bc2c00e3052, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _name: HelpText
-  _prefab: {fileID: 556075124236424615, guid: 2a9be2d0253d6f0499c9ec4cae6101ac, type: 3}
-  _location: 4
---- !u!114 &5884192577671903852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2781522014560111187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f2bd4a0e5e673e4d9399386e0c63db7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _name: HealthHUD
-  _prefab: {fileID: 736340070334246385, guid: 37e40c67503a21f4ab65e89362fe9ca0, type: 3}
-  _location: 0
-  _resourcesID: Player
-  _resourceID: Health
 --- !u!1 &2911380353574614085
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +580,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5798705134039228219}
   - component: {fileID: 523777039523247236}
-  - component: {fileID: 1976313443596582156}
   m_Layer: 0
   m_Name: Windows
   m_TagString: Untagged
@@ -677,22 +623,6 @@ MonoBehaviour:
   - _name: MiniGames
     _prefab: {fileID: 4535804986789899223, guid: 5cb19e124ad99804d87327caa9bb8eae, type: 3}
   _baseTabName: Basic
---- !u!114 &1976313443596582156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5005857772429489953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172e986b20a85dc46bc40485ff290963, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _name: InventoryWindow
-  _prefab: {fileID: 895273012458485970, guid: 42df056f0b16c59458d58e715c2c53c7, type: 3}
-  _hudShowingFlags: Empty
-  _resourcesName: Player
 --- !u!1 &5587375675690196709
 GameObject:
   m_ObjectHideFlags: 0

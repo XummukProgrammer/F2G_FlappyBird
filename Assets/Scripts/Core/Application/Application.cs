@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Application : MonoBehaviour
 {
-    [SerializeField] private ApplicationData _data;
+    [SerializeField] private string _applicationName;
+    [SerializeField] private string _applicationVersion;
     [SerializeField] private Level _level;
     [SerializeField] private HUDContainer _hudContainer;
     [SerializeField] private WindowContainer _windowContainer;
@@ -16,7 +17,8 @@ public class Application : MonoBehaviour
     private ApplicationDebugWindowDelegate _debugWindowDelegate = new();
 
     public static Application Instance;
-    public ApplicationData Data => _data;
+    public string ApplicationName => _applicationName;
+    public string ApplicationVersion => _applicationVersion;
     public Level Level => _level;
     public Managers Managers => _managers;
     public StateGraph StateGraph => GetComponentInChildren<StateGraph>();
@@ -34,8 +36,8 @@ public class Application : MonoBehaviour
         Debug.Assert(Instance != null, "[Core] application singleton has not initialized!");
 
         Debug.Log("[Core] started");
-        Debug.Log("ApplicationName = " + _data.Name);
-        Debug.Log("ApplicationVersion = " + _data.Version);
+        Debug.Log("ApplicationName = " + _applicationName);
+        Debug.Log("ApplicationVersion = " + _applicationVersion);
 
         var managersSetup = new ManagersSetup();
         managersSetup.Setup(_managers);
