@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class CharacterLiveable : MonoBehaviour
 {
+    public event System.Action Died;
+
     [SerializeField] private Resource _healthResource;
     [SerializeField] private Character _character;
+    [SerializeField] private bool _isDestroyOnDeath = true;
 
     private void Awake()
     {
@@ -25,7 +28,12 @@ public class CharacterLiveable : MonoBehaviour
     {
         if (resource.Value <= 0)
         {
-            Destroy(_character.gameObject);
+            Died?.Invoke();
+
+            if (_isDestroyOnDeath)
+            {
+                Destroy(_character.gameObject);
+            }
         }
     }
 }

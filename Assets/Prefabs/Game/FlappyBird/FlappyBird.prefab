@@ -155,7 +155,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8247772775562824173}
+  - {fileID: 6638827477988683498}
   - {fileID: 8906398931549649160}
   m_Father: {fileID: 937460705066183055}
   m_RootOrder: 3
@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 8956388885683249079}
   - component: {fileID: 9002951254900327828}
   - component: {fileID: 7252680382462357359}
+  - component: {fileID: 9017221776911551709}
   m_Layer: 0
   m_Name: FlappyBird
   m_TagString: Untagged
@@ -213,8 +214,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: FlappyBird
-  _bird: {fileID: 3199738189657275025}
+  _birdPrefab: {fileID: 8192469059042465522, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
+  _birdContainer: {fileID: 6638827477988683498}
   _spawner: {fileID: 4875516450327540409}
+  _resultWindow: {fileID: 1190077317295283609}
+  _archive: {fileID: 7252680382462357359}
+  _info: {fileID: 9017221776911551709}
+  _pipes: {fileID: 8906398931549649160}
 --- !u!114 &4875516450327540409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,7 +279,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8daef400654924d9c69fbde65b69a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bird: {fileID: 3199738189657275025}
+--- !u!114 &9017221776911551709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937460705066183088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536c316ed4f43e843bba1fa8691651b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2427085825842740514
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c79ea5fe64ef9644b46a704662bcd23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _toStateID: Result
+  _toStateID: Reload
 --- !u!114 &5253276036278159729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +456,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ddac89544b8d446bf0eccde760b4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2658537680624941904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6638827477988683498}
+  m_Layer: 0
+  m_Name: Bird
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6638827477988683498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2658537680624941904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 937460704177662524}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2781522014560111187
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5798705134039228219}
   - component: {fileID: 523777039523247236}
+  - component: {fileID: 1190077317295283609}
   m_Layer: 0
   m_Name: Windows
   m_TagString: Untagged
@@ -667,6 +716,21 @@ MonoBehaviour:
   - _name: MiniGames
     _prefab: {fileID: 4535804986789899223, guid: 5cb19e124ad99804d87327caa9bb8eae, type: 3}
   _baseTabName: Basic
+--- !u!114 &1190077317295283609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5005857772429489953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa4506f70e79f24e8bb7cd858a70d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: FlappyBirdResultWindow
+  _prefab: {fileID: 4117600662580350935, guid: ca8d8ddfc4f78c14fa9ded24ddcd17c3, type: 3}
+  _hudShowingFlags: Empty
 --- !u!1 &5236759372941773667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,76 +1468,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: Reload
---- !u!1001 &6761802833992821859
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 937460704177662524}
-    m_Modifications:
-    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8272698039358619504, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-      propertyPath: m_Name
-      value: Bird
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
---- !u!114 &3199738189657275025 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8192469059042465522, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-  m_PrefabInstance: {fileID: 6761802833992821859}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17657a8363b87af47af01b89034ac26d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &8247772775562824173 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3432664848281920910, guid: 2857ecb77e66ec24f94fc12bf5e18b5f, type: 3}
-  m_PrefabInstance: {fileID: 6761802833992821859}
-  m_PrefabAsset: {fileID: 0}

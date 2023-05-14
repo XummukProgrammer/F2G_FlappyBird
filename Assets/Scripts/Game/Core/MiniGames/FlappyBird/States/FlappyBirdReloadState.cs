@@ -4,6 +4,19 @@ public class FlappyBirdReloadState : State
     {
         base.OnEnter();
 
+        var info = FlappyBirdMiniGameUtils.GetInfo();
+        if (info)
+        {
+            info.ResetLevelData();
+        }
+
+        var miniGame = FlappyBirdMiniGameUtils.GetMiniGame();
+        if (miniGame)
+        {
+            miniGame.CreateBird();
+            miniGame.RemovePipes();
+        }
+
         Application.Instance.GlobalContext.SetVariable("IsReloaded", "yes");
     }
 

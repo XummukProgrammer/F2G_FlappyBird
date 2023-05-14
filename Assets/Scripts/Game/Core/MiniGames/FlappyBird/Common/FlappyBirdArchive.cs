@@ -2,14 +2,17 @@ using UnityEngine;
 
 public class FlappyBirdArchive : MonoBehaviour
 {
-    [SerializeField] private Bird _bird;
-
-    private int _money = 0;
+    public int Money { private set; get; }
 
     private void Start()
     {
         LoadMoney();
-        _bird.SetMoney(_money);
+
+        var bird = FlappyBirdMiniGameUtils.GetBird();
+        if (bird)
+        {
+            bird.SetMoney(Money);
+        }
 
         var moneyResource = GetMoneyResource();
         if (moneyResource)
@@ -29,9 +32,10 @@ public class FlappyBirdArchive : MonoBehaviour
 
     private Resource GetMoneyResource()
     {
-        if (_bird)
+        var bird = FlappyBirdMiniGameUtils.GetBird();
+        if (bird)
         {
-            return _bird.MoneyResource;
+            return bird.MoneyResource;
         }
         return null;
     }
@@ -45,14 +49,14 @@ public class FlappyBirdArchive : MonoBehaviour
     {
         if (Application.Instance.Archive.HasKey("money"))
         {
-            _money = Application.Instance.Archive.GetInt("money");
+            Money = Application.Instance.Archive.GetInt("money");
         }
     }
 
     private void SetMoney(int money)
     {
-        _money = money;
-        Application.Instance.Archive.SetInt("money", _money);
+        Money = money;
+        Application.Instance.Archive.SetInt("money", Money);
         Application.Instance.Archive.Save();
     }
 }

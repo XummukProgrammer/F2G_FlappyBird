@@ -348,6 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resources: {fileID: 6957565302436323982}
+  _liveable: {fileID: 2676030602708652702}
 --- !u!114 &8192469059042465522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17657a8363b87af47af01b89034ac26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _character: {fileID: 113919608454060014}
   _moneyResource: {fileID: 8185933519230938235}
   _rigidBody2D: {fileID: 7993725775654117205}
   _jumpForce: 7
@@ -377,3 +379,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthResource: {fileID: 9017301334503252511}
   _character: {fileID: 113919608454060014}
+  _isDestroyOnDeath: 0

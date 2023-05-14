@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
+    [SerializeField] private Character _character;
     [SerializeField] private Resource _moneyResource;
     [SerializeField] private Rigidbody2D _rigidBody2D;
     [SerializeField] private float _jumpForce = 1;
 
+    public Character Character => _character;
     public Resource MoneyResource => _moneyResource;
 
     private bool _isStopped = false;
