@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f83527457a0bb409b6cffe37614268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnTime: 1
+  _spawnTime: 1.25
 --- !u!114 &7252680382462357359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: Money
-  _prefab: {fileID: 736340070334246385, guid: 37e40c67503a21f4ab65e89362fe9ca0, type: 3}
+  _prefab: {fileID: 736340070334246385, guid: 9a46a97c672fe9b458c36beae4be342d, type: 3}
   _location: 0
   _resourcesID: Bird
   _resourceID: Money

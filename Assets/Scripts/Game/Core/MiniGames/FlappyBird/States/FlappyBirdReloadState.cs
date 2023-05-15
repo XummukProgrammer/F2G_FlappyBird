@@ -4,22 +4,24 @@ public class FlappyBirdReloadState : State
     {
         base.OnEnter();
 
+        // TODO: Сделать сигнал Reload и убрать тут кучу вызовов других компонентов?
+
         var miniGame = FlappyBirdMiniGameUtils.GetMiniGame();
         if (miniGame)
         {
+            // TODO: С помощью спавнера создавать птичку?
             miniGame.CreateBird();
+        }
 
-            var spawner = miniGame.Spawner;
-            if (spawner)
-            {
-                spawner.Reload();
-            }
+        var spawner = FlappyBirdMiniGameUtils.GetSpawner();
+        if (spawner)
+        {
+            spawner.Reload();
         }
 
         var info = FlappyBirdMiniGameUtils.GetInfo();
         if (info)
         {
-            info.ResetLevelData();
             info.Reload();
         }
 

@@ -7,11 +7,17 @@ public class ResourceHUDBehaviour : HUDBehaviour
 
     public void SetName(string name)
     {
-        _name.text = name;
+        if (_name)
+        {
+            _name.text = name;
+        }
     }
 
     public void SetValue(int value)
     {
-        _value.text = value.ToString();
+        if (_value)
+        {
+            _value.text = value.ToString();
+        }
     }
 }

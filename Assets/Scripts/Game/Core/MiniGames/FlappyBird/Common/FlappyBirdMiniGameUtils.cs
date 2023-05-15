@@ -70,4 +70,14 @@ public static class FlappyBirdMiniGameUtils
         }
         return null;
     }
+
+    public static Spawner GetSpawner()
+    {
+        var miniGame = GetMiniGame();
+        if (miniGame)
+        {
+            return miniGame.Spawner;
+        }
+        return null;
+    }
 }

@@ -11,6 +11,7 @@ public class FlappyBirdInfo : MonoBehaviour
 
     public void Reload()
     {
+        ResetLevelData();
         ResetData();
 
         var bird = FlappyBirdMiniGameUtils.GetBird();
