@@ -6,6 +6,11 @@ public class SpawnConsistentlyChainPolicy : SpawnChainPolicy
 
     private int _index = -1;
 
+    public override void ResetData()
+    {
+        _index = -1;
+    }
+
     public override int GetIndex(Spawn[] spawns)
     {
         ++_index;

@@ -7,11 +7,24 @@ public class Spawner : MonoBehaviour
     [SerializeField] private SpawnChainPolicy _chainPolicy;
     [SerializeField] private SpawnFrequencyPolicy _frequencyPolicy;
 
-    private bool _isEnabled = true;
+    private bool _isEnabled = false;
 
     public void SetIsEnabled(bool isEnabled)
     {
         _isEnabled = isEnabled;
+
+        if (!_isEnabled)
+        {
+            if (_chainPolicy)
+            {
+                _chainPolicy.ResetData();
+            }
+
+            if (_frequencyPolicy)
+            {
+                _frequencyPolicy.ResetData();
+            }
+        }
     }
 
     public void Spawn(Spawn spawn)
@@ -65,9 +78,32 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        if (_isEnabled && _frequencyPolicy && _frequencyPolicy.CanSpawn())
+        if (!_isEnabled)
+        {
+            return;
+        }
+
+        bool canSpawn = false;
+        if (_frequencyPolicy)
+        {
+            _frequencyPolicy.OnUpdate();
+            canSpawn = _frequencyPolicy.CanSpawn();
+        }
+
+        if (canSpawn)
         {
             SpawnByChainPolicy();
         }
+    }
+
+    public void Reload()
+    {
+        for (int i = 0; i < _container.childCount; ++i)
+        {
+            Destroy(_container.GetChild(i).gameObject);
+        }
+
+        SetIsEnabled(false);
+        SetIsEnabled(true);
     }
 }

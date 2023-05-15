@@ -28,13 +28,4 @@ public class FlappyBirdMiniGame : MiniGame
         Destroy(_bird.gameObject);
         _bird = null;
     }
-
-    public void RemovePipes()
-    {
-        // TODO: —делать возможность удаление любых преп€тсвий
-        foreach (var pipe in _pipes.GetComponentsInChildren<PipeGroup>())
-        {
-            Destroy(pipe.gameObject);
-        }
-    }
 }

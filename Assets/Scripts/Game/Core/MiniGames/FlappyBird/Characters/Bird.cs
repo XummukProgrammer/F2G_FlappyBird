@@ -22,7 +22,7 @@ public class Bird : MonoBehaviour
 
     public void SetMoney(int money)
     {
-        _moneyResource.AddValue(money);
+        _moneyResource.AddValue(money, true);
     }
 
     public void OnBirdJumped()

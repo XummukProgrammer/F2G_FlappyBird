@@ -4,8 +4,10 @@ public class FlappyBirdArchive : MonoBehaviour
 {
     public int Money { private set; get; }
 
-    private void Start()
+    public void Reload()
     {
+        ResetData();
+
         LoadMoney();
 
         var bird = FlappyBirdMiniGameUtils.GetBird();
@@ -23,11 +25,7 @@ public class FlappyBirdArchive : MonoBehaviour
 
     private void OnDestroy()
     {
-        var moneyResource = GetMoneyResource();
-        if (moneyResource)
-        {
-            moneyResource.ValueChanged -= OnMoneyValueChanged;
-        }
+        ResetData();
     }
 
     private Resource GetMoneyResource()
@@ -58,5 +56,14 @@ public class FlappyBirdArchive : MonoBehaviour
         Money = money;
         Application.Instance.Archive.SetInt("money", Money);
         Application.Instance.Archive.Save();
+    }
+
+    private void ResetData()
+    {
+        var moneyResource = GetMoneyResource();
+        if (moneyResource)
+        {
+            moneyResource.ValueChanged -= OnMoneyValueChanged;
+        }
     }
 }

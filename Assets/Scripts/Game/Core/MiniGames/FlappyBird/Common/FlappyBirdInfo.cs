@@ -9,8 +9,10 @@ public class FlappyBirdInfo : MonoBehaviour
         AddedMoneyOnLevel = 0;
     }
 
-    private void Start()
+    public void Reload()
     {
+        ResetData();
+
         var bird = FlappyBirdMiniGameUtils.GetBird();
         if (bird)
         {
@@ -24,19 +26,24 @@ public class FlappyBirdInfo : MonoBehaviour
 
     private void OnDestroy()
     {
+        ResetData();
+    }
+
+    private void OnBirdMoneyAdded(int prevValue, int currValue)
+    {
+        AddedMoneyOnLevel += currValue - prevValue;
+    }
+
+    private void ResetData()
+    {
         var bird = FlappyBirdMiniGameUtils.GetBird();
         if (bird)
         {
             var moneyResource = bird.MoneyResource;
             if (moneyResource)
             {
-                moneyResource.ValueAdded += OnBirdMoneyAdded;
+                moneyResource.ValueAdded -= OnBirdMoneyAdded;
             }
         }
-    }
-
-    private void OnBirdMoneyAdded(int prevValue, int currValue)
-    {
-        AddedMoneyOnLevel += currValue - prevValue;
     }
 }

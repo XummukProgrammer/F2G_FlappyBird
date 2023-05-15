@@ -7,6 +7,12 @@ public class SpawnTimeFrequencyPolicy : SpawnFrequencyPolicy
     private bool _canSpawn;
     private float _time = 0;
 
+    public override void ResetData()
+    {
+        _canSpawn = false;
+        _time = 0;
+    }
+
     public override bool CanSpawn() 
     { 
         if (_canSpawn)
@@ -17,7 +23,7 @@ public class SpawnTimeFrequencyPolicy : SpawnFrequencyPolicy
         return false; 
     }
 
-    private void Update()
+    public override void OnUpdate()
     {
         _time += Time.deltaTime;
         if (_time >= _spawnTime)

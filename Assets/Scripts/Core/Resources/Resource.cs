@@ -22,14 +22,14 @@ public class Resource : MonoBehaviour
         _value = _startValue;
     }
 
-    public void AddValue(int addValue)
+    public void AddValue(int addValue, bool isNoSignals = false)
     {
         if (_changePolicy)
         {
             int prevValue = _value;
             _value = _changePolicy.AddValue(_value, addValue);
 
-            if (prevValue != _value)
+            if (prevValue != _value && !isNoSignals)
             {
                 ValueAdded?.Invoke(prevValue, _value);
                 ValueChanged?.Invoke(this);
@@ -37,14 +37,14 @@ public class Resource : MonoBehaviour
         }
     }
 
-    public void TakeValue(int takeValue)
+    public void TakeValue(int takeValue, bool isNoSignals = false)
     {
         if (_changePolicy)
         {
             int prevValue = _value;
             _value = _changePolicy.TakeValue(_value, takeValue);
 
-            if (prevValue != _value)
+            if (prevValue != _value && !isNoSignals)
             {
                 ValueTaked?.Invoke(prevValue, _value);
                 ValueChanged?.Invoke(this);

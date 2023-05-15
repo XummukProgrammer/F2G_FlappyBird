@@ -4,17 +4,35 @@ public class FlappyBirdReloadState : State
     {
         base.OnEnter();
 
-        var info = FlappyBirdMiniGameUtils.GetInfo();
-        if (info)
-        {
-            info.ResetLevelData();
-        }
-
         var miniGame = FlappyBirdMiniGameUtils.GetMiniGame();
         if (miniGame)
         {
             miniGame.CreateBird();
-            miniGame.RemovePipes();
+
+            var spawner = miniGame.Spawner;
+            if (spawner)
+            {
+                spawner.Reload();
+            }
+        }
+
+        var info = FlappyBirdMiniGameUtils.GetInfo();
+        if (info)
+        {
+            info.ResetLevelData();
+            info.Reload();
+        }
+
+        var archive = FlappyBirdMiniGameUtils.GetArchive();
+        if (archive)
+        {
+            archive.Reload();
+        }
+
+        var huds = Application.Instance.Managers.GetManager<HUDs>();
+        if (huds != null)
+        {
+            huds.Reload();
         }
 
         Application.Instance.GlobalContext.SetVariable("IsReloaded", "yes");

@@ -22,8 +22,6 @@ public class HUD : ManagerableElement
         base.OnInit();
 
         Application.Instance.HUDShowingFlagsController.FlagsChanged += OnHUDShowingFlagsChanged;
-
-        ChangeActive();
     }
 
     public override void OnDeinit()
@@ -61,7 +59,7 @@ public class HUD : ManagerableElement
         }
     }
 
-    private void ChangeActive()
+    public void ChangeActive()
     {
         if (HasHUDInShowingFlags() && IsActive())
         {
