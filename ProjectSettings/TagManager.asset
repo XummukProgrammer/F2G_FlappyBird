@@ -41,6 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Mountains
+    uniqueID: 175704303
+    locked: 0
+  - name: Bird
+    uniqueID: 3759650857
+    locked: 0
+  - name: Pipe
+    uniqueID: 1539246633
+    locked: 0
+  - name: Ground
+    uniqueID: 3535371539
+    locked: 0
   - name: GUI
     uniqueID: 2393635471
     locked: 0
